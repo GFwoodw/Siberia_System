@@ -1,6 +1,2 @@
-if SHIELD_SIBERIA17NRF
-
-config ZMK_KEYBOARD_NAME
-    default "Siberia17nrf"
-
-endif
+config SHIELD_SIBERIA17NRF
+    def_bool $(shields_list_contains,siberia17nrf)
