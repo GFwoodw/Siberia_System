@@ -25,7 +25,7 @@
         
         default_layer {
             bindings = <
-                &kp NUM_LOCK  &kp KP_SLASH   &kp KP_ASTERISK &kp KP_MINUS
+                &kp KP_NUM  &kp KP_SLASH   &kp KP_ASTERISK &kp KP_MINUS
                 &kp KP_7      &kp KP_8       &kp KP_9        &to_layer 2 KP_PLUS
                 &kp KP_4      &kp KP_5       &kp KP_6        &none
                 &lt 1 KP_1    &lt 2 KP_2    &kp KP_3         &to_layer 1 KP_ENTER
