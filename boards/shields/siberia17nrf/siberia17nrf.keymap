@@ -9,27 +9,6 @@
 #define BT          2
 
 / {
-
-    chosen {
-      zmk,kscan = &kscan0;
-      zmk,matrix-transform = &default_transform;
-    };
-
-    behaviors {
-        suspend_enter: suspend_enter {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <2000>;
-            flavor = "tap-preferred";
-        };
-        bt_clear_safe: bt_clear_safe {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <5000>;
-            flavor = "hold-only";
-        };
-    };
-    
     keymap {
         compatible = "zmk,keymap";
         
@@ -61,16 +40,6 @@
                 &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2    &trans
                 &none         &bt_clear_safe &bt BT_CLR_ALL  &none
             >;
-        };
-        
-        encoders {
-            encoder-0 {
-                bindings = <
-                    &kp VOLD  &kp VOLU   // Capa 0
-                    &kp WH_D  &kp WH_U   // Capa 1
-                    &kp LEFT  &kp RIGHT  // Capa 2
-                >;
-            };
-        };
+        }
     };
 };
