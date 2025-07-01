@@ -1,0 +1,10 @@
+file_format: "1"
+id: siberia17nrf
+name: siberia17nrf
+type: shield
+url: https://www.siberiacasewood.com
+requires:
+  - pro_micro
+features:
+  - keys
+  - encoder
