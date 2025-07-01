@@ -6,10 +6,8 @@
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &default_transform;
     };
-    kscan0: kscan {
+    kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
-        // define row-gpios with 5 elements and col-gpios with 4...
-        
         diode-direction = "col2row";
 
 
