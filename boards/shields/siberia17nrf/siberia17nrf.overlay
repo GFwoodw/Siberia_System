@@ -39,10 +39,19 @@
        
     };
 
-    encoder: encoder {
-        compatible = "zmk,rotary-encoder";
-        a-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    encoder: encoder0 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "disabled";
+    };
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder >;
+        triggers-per-rotation = <20>;
+    };
+    &encoder {
         status = "okay";
     };
 };
